@@ -3,17 +3,44 @@
   <head>
     <meta charset="utf-8">
     <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" charset="utf-8"></script>
+
+    </script>
   </head>
   <body>
-    <header id="title">
-      <h1>Survey Form</h1>
-      <p id="description">Here is a short form for you to fill out.</p>
     <header>
+      <h1 id="title">Survey Form</h1>
+      <p id="description">Here is a short form for you to fill out.</p>
+    </header>
       <form id="survey-form">
-    <label for="fname">First name:</label><br>
-    <input type="text" id="fname" name="fname"><br>
-    <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="lname">
+    <label for="name" id="name-label">First name:</label><br>
+    <input type="text" id="name" name="name"placeholder="John" required><br>
+    <label for="email" id="email-label">Email:</label><br>
+    <input type="email" id="email" name="email" placeholder="John1980@email.com" required><br>
+    <label for="number" id="number-label">Number (between 1 and 100):</label><br>
+    <input type="number" id="number" name="number" min="1" max="100" placeholder="7"><br>
+    <label for="prefer">Which OS do you prefer?</label><br>
+    <select id="dropdown" name="prefer">
+      <option value="mac os">Mac OS</option>
+      <option value="microsoft windows">Microsoft Windows</option>
+      <option value="linux">Linux</option>
+      <option value="unix">Unix</option>
+      <option value="other">Other</option>
+    </select><br>
+    <input type="radio" name="options" value="option 1">
+    <label for="option 1">option 1</label>
+    <input type="radio" name="options" value="option 2">
+    <label for="option 2">option 2</label><br>
+    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+    <label for="vehicle1"> I have a bike</label><br>
+    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+    <label for="vehicle2"> I have a car</label><br>
+    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+    <label for="vehicle3"> I have a boat</label><br>
+    <textarea name="name" rows="8" cols="80">Questions or Comments?</textarea>
+    <input type="submit" name="submit" value="SUBMIT" id="submit">
   </form>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" charset="utf-8"></script>
   </body>
 </html>
